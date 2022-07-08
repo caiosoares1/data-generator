@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+* {
+	box-sizing: border-box;
+}
+
+a {
+	color: #FFFF;
+}
+
+body {
+	background-color: #3B3B98;
+	color: #fff;
+    font-family: 'Muli', sans-serif;
+    flex-direction: row;
+    min-height: 10vh;
+    margin-top: 10px;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+	text-align: center;
+}
+
+h2 {
+	font-size: 30px;
+	margin: 10px 0 20px;
+	text-align: center;
+}
+
+.titulo {
+	margin-bottom: 30px;
+	justify-content: center;
+	align-items: center;
+	font-size: 30px;
+	display: flex;
+	padding: 10px;
+	max-width: 100%;
+	margin: 35px;
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: #28245c;
+}
+
+.topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.topnav a.active {
+    background-color: #181434;
+    color: white;
+}
+
+.conteudo {
+	display: flex;
+	margin-top: 1vh;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.cadastro {
+	width: 100vw;
+	height: 93vh;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.login {
+	width: 100vw;
+	height: 95vh;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.containerstyle {
+	background-color: #23235B;
+	box-shadow: 0px 2px 10px rgba(255, 255, 255, 0.2);
+	padding: 20px;
+	width: 350px;
+	max-width: 100%;
+	margin: 35px;
+}
+
+.tipo {
+	height: 22px;
+	width: 100px;
+}
+
+.label-cpf {
+	text-align: start;
+}
+
+.nome {
+	width: 140px;
+	text-align: center;
+}
+
+.result-container {
+	background-color: rgba(0, 0, 0, 0.4);
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	position: relative;
+	font-size: 16px;
+	letter-spacing: 1px;
+	padding: 12px 10px;
+	height: 50px;
+	width: 100%;
+}
+
+.result-container #result {
+	font-weight: bold;
+  	word-wrap: break-word;
+	max-width: calc(100% - 40px);
+}
+
+.card{
+	padding: 40px;
+	border-radius: 5px;
+	width: 25%;
+}
+
+.references{
+	margin-top: 20px;
+	text-align: center;
+	color: white;
+}
+  
+.card-top{
+	padding: 20px;
+	text-align: center;
+}
+
+.card-group{
+	padding-top: 20px;
+	margin-bottom: 10px;
+}
+
+.card-group > label{
+	width: 100%;
+	margin-bottom: 5px;
+	color: rgb(255, 255, 255);
+	display: block;
+	font-family: 'Roboto', sans-serif;
+	font-weight: bold;
+}
+
+.card-group > input{
+	border-color: #FFFF;
+	border-radius: 10px;
+	outline: 0;
+	width: 100%;
+	height: 40px;
+	padding: 5px;
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+#result-pass{
+	font-weight: bold;
+}
+
+/*#cnpjcontainer {
+	left: 540px;
+}*/
+
+#result-email{
+	font-weight: bold;
+}
+
+#result-cpf{
+	margin-left: 10px;
+	font-weight: bold;
+}
+
+.result-container .btn {
+	font-size: 20px;
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	height: 40px;
+	width: 40px;
+}
+
+.btn {
+	border: none;
+	color: #fff;
+	cursor: pointer;
+	font-size: 16px;
+	padding: 8px 12px;
+	background-color: #3B3B98;
+}
+
+.btn-primary {
+	display: block;
+}
+
+.setting {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 15px 0;
+}
+
+@media screen and (max-width: 400px) {
+	.result-container {
+		font-size: 14px;
+	}
+}

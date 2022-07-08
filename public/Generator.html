@@ -1,0 +1,135 @@
+<!doctype html>
+
+<html lang="pt-br">
+
+<head>
+
+  <meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="./css/style.css">
+
+  <title>Simple Generator API</title>
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  
+</head>
+
+<body>
+
+  <div class="topnav">
+    <a class="active" href="Generator.html">Home</a>
+    <a href="Login.html">Logout</a>
+  </div>
+  
+  <!------------------------------------------------------------------------------ PASS GENERATOR------------------------------------------------------------------------------------------------->
+  
+    <div class="titulo">
+      <h1>Data Generator</h1>
+    </div>
+  <div class="conteudo">  
+    <div name="passgenerate" class="container-1 containerstyle">
+      <h2>Pass Generator</h2>
+      <div class="result-container">
+        <span id="result-pass"></span>
+        <button class="btn" id="clipboard">
+          <span class="material-icons">file_copy</span>
+        </button>  
+      </div>
+      <form id="caracs">
+        <div class="settings">
+          <div class="setting">
+            <label for="carac">Número de caracteres:</label>
+            <input type="number" class="form-control" id="carac" name="carac" min="8" max="20" placeholder="8-20" required>
+          </div>
+        </div>
+        <button type="submit" id="gerar" class="btn btn-primary" style="border-radius: 50px; width: 220px; margin: auto; margin-top: 53px; margin-bottom: 30px; max-height: 100%;">
+          Gerar Senha
+        </button>
+      </form>
+    </div>
+
+    <!------------------------------------------------------------------------------ EMAIL GENERATOR----------------------------------------------------------------------------------------------->
+
+    <div name="emailgenerate" class="container-2 containerstyle">
+      <h2>Email Generator</h2>
+      <div class="result-container">
+        <span id="result-email"></span>
+        <button class="btn" id="clipboard2">
+          <span class="material-icons">file_copy</span>
+        </button>  
+      </div>
+      <form id="names">
+        <div class="settings">
+          <div class="setting">
+            <label for="tipo">Selecione o domínio:</label>
+            <select type="text" class="tipo" id="tipo" name="tipo">
+              <option>--Selecione--</option>
+            </select>
+          </div>
+          <div class="setting">
+            <label for="firstlastname">Nome e sobrenome:</label>
+            <input class="nome" type="text" id="firstlastname" name="firstlastname" placeholder="ex: Ednaldo Pereira" required>
+          </div>
+        </div>
+        <button type="submit" id="gerar" class="btn btn-primary" style="border-radius: 50px; width: 220px; margin: auto; margin-top: 17px; margin-bottom: 30px; max-height: 100%;">
+          Gerar Email
+        </button>
+      </form>
+    </div>
+
+    <!------------------------------------------------------------------------------ CPF GENERATOR------------------------------------------------------------------------------------------------->
+
+    <div name="cpfgenerate" class="container-3 containerstyle">
+      <h2>CPF Generator</h2>
+      <div class="result-container">
+        <label class="label-cpf">CPF:</label>
+        <span id="result-cpf"></span>
+        <button class="btn" id="clipboard3">
+          <span class="material-icons">file_copy</span>
+        </button>  
+      </div>
+      <form id="cpf">
+        <div class="settings">
+          <div class="setting">
+            <input name="mascara" value="mascara" id="mascara" type="checkbox"> 
+            <label for="mascara">Máscara</label>
+          </div>
+        </div>
+        <button type="submit" id="gerar" class="btn btn-primary" style="border-radius: 50px; width: 220px; margin: auto; margin-top: 53px; margin-bottom: 30px; max-height: 100%;">
+          Gerar CPF
+        </button>
+      </form>
+    </div>
+
+    <!------------------------------------------------------------------------------ CNPJ GENERATOR----------------------------------------------------------------------------------------------->
+
+
+    <div name="cnpjgenerate" id="cnpjcontaier" class="container-4 containerstyle">
+      <h2>CNPJ Generator</h2>
+      <div class="result-container">
+        <label class="label-cnpj">CNPJ:</label>
+        <span id="result-cnpj"></span>
+        <button class="btn" id="clipboard4">
+          <span class="material-icons">file_copy</span>
+        </button>  
+      </div>
+      <form id="cnpj">
+        <div class="settings">
+          <div class="setting">
+            <input name="mascara" value="mascara" id="mascara" type="checkbox"> 
+            <label for="mascara">Máscara</label>
+          </div>
+        </div>
+        <button type="submit" id="gerar" class="btn btn-primary" style="border-radius: 50px; width: 220px; margin: auto; margin-top: 53px; margin-bottom: 30px; max-height: 100%;">
+          Gerar CNPJ
+        </button>
+      </form>
+    </div>
+  </div>
+  
+  <script src="./script/script.js"></script>
+
+</body>
+</html>

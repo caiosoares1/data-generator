@@ -1,0 +1,16 @@
+{
+    "domains": [
+        {
+            "id": 1,
+            "domain": "gmail.com"
+        },
+        {
+            "id": 2,
+            "domain": "outlook.com"
+        },
+        {
+            "id": 3,
+            "domain": "hotmail.com"
+        }
+    ]
+}

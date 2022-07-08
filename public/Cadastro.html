@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined">
+  <title>Cadastro</title>
+</head>
+
+<body>
+  <div class="topnav">
+    <a href="Login.html">Login</a>
+  </div>
+
+  <div class="cadastro">
+
+    <div name="passgenerate" class="container-1 containerstyle card">
+
+      <h2>Cadastro</h2>
+
+      <form id="cadastro">
+
+        <div class="card-group">
+          <label for="name" class="form-label">Nome</label>
+          <input type="text" class="form-control" id="name" name="name" placeholder="Nome" required>
+        </div>
+
+        <div class="card-group">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" class="form-control" id="email" name="email" placeholder="Email" required>
+        </div>
+
+        <div class="card-group">
+          <label for="senha" class="form-label">Senha</label>
+          <input type="password" class="form-control" id="senha" name="senha" placeholder="Senha" required>
+        </div>
+
+        <div class="card-group">
+          <label class="form-label">Confirma Senha</label>
+          <input type="password" class="form-control" id="confirmation_password" placeholder="Confirme a Senha" required>
+        </div>
+
+        <button href="Login.html" type="submit" id="gerar" class="btn btn-primary" style="border-radius: 50px; width: 220px; margin: auto; margin-top: 53px">
+          Cadastrar
+        </button>
+
+      </form>
+
+    </div>
+
+  </div>
+
+  <script>
+
+    const form = document.querySelector('form');
+
+    form.onsubmit = (event) => {
+      event.preventDefault();
+
+      const dados = Object.fromEntries(new FormData(form));
+
+      signup(dados);
+
+      form.reset()
+    };
+
+    async function signup(dados, res) {
+      const url = '/signup';
+
+      const config = {
+        method: 'post',
+        body: JSON.stringify(dados),
+        headers: {
+        'Content-Type': 'application/json; charset=UTF-8',
+        },
+      };
+
+      if ((await(await fetch(url, config)).json()) === true) {
+        alert('Cadastrado com sucesso!');
+        location.href = '/Login.html'
+      } else {
+        alert('Nome/email já cadastrado!');
+      };
+    };
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined">
+  <title>Login</title>
+</head>
+
+<body>
+  <!--- <div class="topnav">
+    <a class="active" href="Generator.html">Home</a>
+  </div> --->
+
+  <div class="login">
+
+    <div name="passgenerate" class="container-1 containerstyle card">
+
+      <h2>Login</h2>
+
+      <form id="caracs">
+
+        <div class="card-group">
+          <label for="email">Email</label>
+          <input type="email" class="form-control" id="email" name="email" placeholder="Email" required>
+        </div>
+
+        <div class="card-group">
+          <label for="senha">Senha</label>
+          <input type="password" class="form-control" id="senha" name="senha" placeholder="Senha" required>
+        </div>
+
+        <button type="submit" id="gerar" class="btn btn-primary" style="border-radius: 50px; width: 220px; margin: auto; margin-top: 53px">
+          Confirmar
+        </button>
+
+        <div class="references">
+
+          <a href="Cadastro.html">Criar uma nova conta</a>
+
+        </div>
+
+      </form>
+
+    </div>
+
+  </div>
+
+  <script>
+    const form = document.querySelector('form');
+
+    form.onsubmit = (event) => {
+      event.preventDefault();
+
+      const user = Object.fromEntries(new FormData(form));
+
+      signin(user);
+    };
+
+    async function signin(user) {
+      const url = '/signin';
+
+      const config = {
+        method: 'post',
+        body: JSON.stringify(user),
+        headers: {
+          'Content-Type': 'application/json; charset=UTF-8',
+        },
+      };
+
+      const result = await (await fetch(url, config)).json();
+      
+      if(result.error == 1 || result.error == 2){ // mensagem de alerta
+        alert(result.mensage);
+      } else if(result.error == 0){
+        location.href = "/Generator.html"; // rederecionar
+      }
+    };
+  
+  </script>
+</body>
+</html>
